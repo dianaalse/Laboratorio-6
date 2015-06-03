@@ -9,17 +9,6 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include <iostream>
-#include <time.h>
-#include <string>
-#include "ArbolBinario.h"
-#include "Elemento.h"
-#include "ElementoInt.h"
-#include "ElementoDou.h"
-#include "ElementoPersona.h"
-#include "Persona.h"
-#include "NodoLista.h" 
-#include "Lista.h"
 
 
 
