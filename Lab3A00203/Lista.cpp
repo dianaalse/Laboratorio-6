@@ -217,7 +217,7 @@ void Lista::imprimir()
 	
 		 while (actualPtr != 0) // obtiene los datos del elemento
 		 {
-		 cout << actualPtr->datos << " ";
+		 cout << *actualPtr->datos << " ";
 		 actualPtr = actualPtr->siguientePtr;
 		 } // fin de while
 	

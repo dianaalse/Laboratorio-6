@@ -15,7 +15,7 @@ using namespace std;
 
 class ElementoInt : public Elemento {
 
-private:
+protected:
 	int i;
 
 public:

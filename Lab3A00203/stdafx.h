@@ -10,11 +10,13 @@
 #include <stdio.h>
 #include <tchar.h>
 #include <iostream>
+#include <fstream>
 #include <time.h>
 #include <string>
 #include "ArbolBinario.h"
 #include "Elemento.h"
 #include "ElementoInt.h"
+#include "ElementoIntInt.h"
 #include "ElementoDou.h"
 #include "ElementoPersona.h"
 #include "Persona.h"

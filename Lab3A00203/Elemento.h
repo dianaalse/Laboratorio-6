@@ -18,7 +18,7 @@ class Elemento {
 
 protected:
 	Elemento();
-	Elemento * hIzq, * hDer;
+	Elemento * hIzq, *hDer;
 
 public:
 	virtual ~Elemento();

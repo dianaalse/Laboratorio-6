@@ -83,8 +83,10 @@
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="ElementoDou.h" />
     <ClInclude Include="ElementoInt.h" />
+    <ClInclude Include="ElementoIntInt.h" />
     <ClInclude Include="ElementoPersona.h" />
     <ClInclude Include="Lista.h" />
+    <ClInclude Include="NodoLista.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -94,9 +96,11 @@
     <ClCompile Include="Elemento.cpp" />
     <ClCompile Include="ElementoDou.cpp" />
     <ClCompile Include="ElementoInt.cpp" />
+    <ClCompile Include="ElementoIntInt.cpp" />
     <ClCompile Include="ElementoPersona.cpp" />
     <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="NodoLista.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
