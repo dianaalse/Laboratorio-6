@@ -197,7 +197,8 @@ void Lista::primerElemento()
 		cout << "No hay elementos" << endl; // la nueva lista sólo tiene un nodo
 	else // la Lista no está vacía
 	{
-		cout << primeroPtr->obtenerDatos; // apunta el nuevo nodo al nodo que antes era el primero
+		cout << "El primer Elemento es: " << *primeroPtr->datos << "\n";
+		cout << "\n";// apunta el nuevo nodo al nodo que antes era el primero
 		 // orienta primeroPtr hacia el nuevo nodo
 	} // fin de else
 } // fin de la función insertarAlFrente

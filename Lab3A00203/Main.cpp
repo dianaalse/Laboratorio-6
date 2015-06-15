@@ -20,6 +20,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		pilaInt.imprimirPila();
 	} // fin de for
 
+	pilaInt.peek();
+
 	int enteroSacado = 2; // almacena el valor int sacado de la pila
 
 	// saca enteros de pilaInt
