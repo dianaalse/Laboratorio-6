@@ -22,6 +22,8 @@
 #include "Persona.h"
 #include "NodoLista.h" 
 #include "Lista.h"
+#include "Pila.h"
+
 
 
 
