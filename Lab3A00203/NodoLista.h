@@ -3,6 +3,7 @@ class NodoLista
 {
 	
 friend class Lista; // hace de Lista una amiga
+
 public:
 			NodoLista(Elemento *); // constructor
 			Elemento* obtenerDatos(); // devuelve los datos en el nodo

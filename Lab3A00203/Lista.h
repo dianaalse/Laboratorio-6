@@ -12,6 +12,7 @@ class Lista
 		bool eliminarDelFrente(Elemento *);
 		bool eliminarDelMedio(int);
 		bool eliminarDelFinal(Elemento *);
+		void primerElemento();
 		bool estaVacia();
 		void imprimir();
 private:

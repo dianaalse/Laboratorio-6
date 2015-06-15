@@ -22,6 +22,11 @@ bool Pila::pop(Elemento * datos)
 	return eliminarDelFrente(datos);
 } // fin de la función pop
 
+void Pila::peek()
+{
+	primerElemento();
+} // fin de la función 
+
 // estaPilaVacia llama a la función estaVacia de Lista
 bool Pila::estaPilaVacia()
 {

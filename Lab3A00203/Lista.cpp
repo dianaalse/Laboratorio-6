@@ -190,6 +190,20 @@ bool Lista::eliminarDelFinal(Elemento * valor)
 		 } // fin de else1
 } // fin de la función eliminarDelFinal
 
+void Lista::primerElemento()
+{
+	
+	if (estaVacia()) // la Lista está vacía
+		cout << "No hay elementos" << endl; // la nueva lista sólo tiene un nodo
+	else // la Lista no está vacía
+	{
+		cout << primeroPtr->obtenerDatos; // apunta el nuevo nodo al nodo que antes era el primero
+		 // orienta primeroPtr hacia el nuevo nodo
+	} // fin de else
+} // fin de la función insertarAlFrente
+
+// inserta un nodo al final de la lista
+
  // ¿está la Lista vacía?
  bool Lista::estaVacia()
 {
@@ -207,13 +221,13 @@ void Lista::imprimir()
 {
 	if (estaVacia()) // la Lista está vacía
 		 {
-		 cout << "La lista esta vacia\n\n";
+		 cout << "No se encontraron elementos\n\n";
 		 return;
 		 } // fin de if
 	
 		 NodoLista *actualPtr = primeroPtr;
 	
-		 cout << "La lista es: ";
+		 cout << "Los Elementos son: ";
 	
 		 while (actualPtr != 0) // obtiene los datos del elemento
 		 {

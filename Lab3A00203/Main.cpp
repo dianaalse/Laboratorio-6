@@ -6,70 +6,29 @@ using std::cout;
 using std::endl;
 using std::string;
 
-
-
-
-
 int _tmain(int argc, _TCHAR* argv[])
 {  
-	Lista elemInt;
-	Lista elemDou;
-	Lista elemPer;
-	Lista elemIntInt;
+	
+	Pila pilaInt; // crea una Pila de valores int
 
+	cout << "procesando una Pila de valores enteros" << endl;
 
-	cout << "La lista de Elementos Int" << "/n" << endl;
+	// mete los enteros a pilaInt
+	for (int i = 0; i < 3; i++)
+	{
+		pilaInt.push(new ElementoInt(i));
+		pilaInt.imprimirPila();
+	} // fin de for
 
-	for (int i = 0; i < 5; ++i) {
-		elemInt.insertarAlFinal(new ElementoInt(rand() % 100));
-		elemInt.imprimir();
-	}
+	int enteroSacado = 2; // almacena el valor int sacado de la pila
 
-	for (int i = 0; i < 5; ++i) {
-		elemInt.insertarAlFrente(new ElementoInt(rand() % 100));
-		elemInt.imprimir();
-	}
-
-	cout << "La lista de Elementos IntInt" << endl;
-
-	for (int i = 0; i < 5; ++i) {
-		elemInt.insertarAlFinal(new ElementoIntInt(rand() % 100, rand()%100));
-		elemInt.imprimir();
-	}
-
-	for (int i = 0; i < 5; ++i) {
-		elemInt.insertarAlFrente(new ElementoIntInt(rand() % 100,rand()%100));
-		elemInt.imprimir();
-	}
-
-	//eliminar del frente y del final
-
-
-	cout << "La lista de Elementos double" << endl;
-
-	for (int i = 0; i < 5; ++i) {
-		elemDou.insertarAlFinal(new ElementoDou((rand() % 100) / 5.222));
-		elemDou.imprimir();
-	}
-
-	for (int i = 0; i < 5; ++i) {
-		elemDou.insertarAlFrente(new ElementoDou((rand() % 100) / 5.222));
-		elemDou.imprimir();
-	}
-
-	cout << "La lista de Elementos Persona" << endl;
-
-	int cant = 5;
-	int id = 0;
-	string arrayNom[4] = { "Andres", "Marco", "Luis", "Miguel" };
-	Persona** pe;
-	pe = new Persona*[cant];
-	for (int i = 0; i < cant; ++i) {
-		int RandIndex = rand() % 4;
-		pe[i] = new Persona(id++, arrayNom[RandIndex]);
-		elemPer.insertarAlFrente(new ElementoPersona(pe[i]));
-		elemPer.imprimir();
-	}
+	// saca enteros de pilaInt
+	while (!pilaInt.estaPilaVacia())
+	{
+		pilaInt.pop(new ElementoInt(enteroSacado));
+		cout << enteroSacado << " se saco de la pila" << endl;
+		pilaInt.imprimirPila();
+	} // fin de while
 
 
 	system("pause");

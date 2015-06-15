@@ -9,6 +9,7 @@ public:
 	~Pila();
 	void push(Elemento*);
 	bool pop(Elemento*);
+	void peek();
 	bool estaPilaVacia();
 	void imprimirPila();
 }; 
