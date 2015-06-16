@@ -21,11 +21,11 @@ void Persona::setID(int id){
 }
 
 void Persona::setNombre(string name){
-nombre = name;
+	nombre = name;
 }
 
 int Persona::getID(){
-return ID;
+	return ID;
 }
 
 ostream& operator <<(ostream& out, const Persona& p) {

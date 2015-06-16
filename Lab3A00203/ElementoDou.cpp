@@ -10,7 +10,7 @@
 
 
 ElementoDou::ElementoDou(double i) :
-		i(i) {
+i(i) {
 }
 
 ElementoDou::~ElementoDou() {

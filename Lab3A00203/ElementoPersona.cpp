@@ -8,7 +8,7 @@
 #include "stdafx.h"
 
 ElementoPersona::ElementoPersona(Persona * p) {
-		this -> p = p;
+	this->p = p;
 
 }
 
@@ -20,8 +20,8 @@ int ElementoPersona::compareTo(Elemento * otro) {
 	int cmp = 0;
 	ElementoPersona * e = static_cast<ElementoPersona *>(otro);
 	if (e != 0) {
-		int IDThis = this->getPersona()-> getID();
-		int IDOtro = e->getPersona()-> getID();
+		int IDThis = this->getPersona()->getID();
+		int IDOtro = e->getPersona()->getID();
 		cmp = IDThis < IDOtro ? -1 : IDThis == IDOtro ? 0 : 1;
 	}
 	return cmp;

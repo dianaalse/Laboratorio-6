@@ -3,18 +3,18 @@
 
 // constructor
 
- NodoLista::NodoLista(Elemento * elemento)
- {
-	 this->datos = elemento;
+NodoLista::NodoLista(Elemento * elemento)
+{
+	this->datos = elemento;
 	this->siguientePtr = 0;
-  } // fin del constructor de NodoLista
+} // fin del constructor de NodoLista
 
 // devuelve una copia de los datos en el nodo
 
-Elemento * NodoLista::obtenerDatos() 
+Elemento * NodoLista::obtenerDatos()
 {
-	 return datos;
-	 } // fin de la función obtenerDatos
+	return datos;
+} // fin de la función obtenerDatos
 
 
 

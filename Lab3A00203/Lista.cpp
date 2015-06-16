@@ -12,44 +12,44 @@ Lista::Lista(){
 // destructor
 Lista::~Lista()
 {
- if (!estaVacia()) // la Lista no está vacía
-		{
+	if (!estaVacia()) // la Lista no está vacía
+	{
 		cout << "Destruyendo nodos ...\n";
-		
+
 		NodoLista *actualPtr = primeroPtr;
 		NodoLista *tempPtr;
-		
-			while (actualPtr != 0) // elimina los nodos restantes
-			{
+
+		while (actualPtr != 0) // elimina los nodos restantes
+		{
 			tempPtr = actualPtr;
 			cout << tempPtr->datos << "\n";
 			actualPtr = actualPtr->siguientePtr;
 			delete tempPtr;
-			} // fin de while
-		} // fin de if
-	
-		cout << "Se destruyeron todos los nodos\n\n";
-	} // fin del destructor de Lista
+		} // fin de while
+	} // fin de if
 
- // inserta un nodo al frente de la lista
+	cout << "Se destruyeron todos los nodos\n\n";
+} // fin del destructor de Lista
+
+// inserta un nodo al frente de la lista
 
 void Lista::insertarAlFrente(Elemento* valor)
 {
-	 NodoLista *nuevoPtr = obtenerNuevoNodo(valor); // define nuevo nodo con parametro
-	
-		if (estaVacia()) // la Lista está vacía
+	NodoLista *nuevoPtr = obtenerNuevoNodo(valor); // define nuevo nodo con parametro
+
+	if (estaVacia()) // la Lista está vacía
 		primeroPtr = ultimoPtr = nuevoPtr; // la nueva lista sólo tiene un nodo
 	else // la Lista no está vacía
-		 {
+	{
 		nuevoPtr->siguientePtr = primeroPtr; // apunta el nuevo nodo al nodo que antes era el primero
-			 primeroPtr = nuevoPtr; // orienta primeroPtr hacia el nuevo nodo
-	 } // fin de else
-	 } // fin de la función insertarAlFrente
+		primeroPtr = nuevoPtr; // orienta primeroPtr hacia el nuevo nodo
+	} // fin de else
+} // fin de la función insertarAlFrente
 
- // inserta un nodo al final de la lista
+// inserta un nodo al final de la lista
 
 void Lista::insertarAlMedio(Elemento* valor, int num_nodo){
-	
+
 
 	NodoLista *nuevoPtr = obtenerNuevoNodo(valor); // nuevo nodo
 
@@ -73,7 +73,7 @@ void Lista::insertarAlMedio(Elemento* valor, int num_nodo){
 		temp->datos = valor;                  // store data(first field)
 		temp->siguientePtr = nuevoPtr->siguientePtr;            //transfer the address of temp1->next to temp->next
 		nuevoPtr->siguientePtr = temp;             //transfer the address of temp to temp1->next
-		
+
 	}
 }
 
@@ -81,34 +81,34 @@ void Lista::insertarAlFinal(Elemento * valor)
 {
 	NodoLista *nuevoPtr = obtenerNuevoNodo(valor); // nuevo nodo
 
-		 if (estaVacia()) // la Lista está vacía
-		 primeroPtr = ultimoPtr = nuevoPtr; // la nueva lista sólo tiene un nodo
-	 else // la Lista no está vacía
-		 {
+	if (estaVacia()) // la Lista está vacía
+		primeroPtr = ultimoPtr = nuevoPtr; // la nueva lista sólo tiene un nodo
+	else // la Lista no está vacía
+	{
 		ultimoPtr->siguientePtr = nuevoPtr; // actualiza el nodo que antes era el último
 		ultimoPtr = nuevoPtr; // nuevo último nodo
-		 } // fin de else
+	} // fin de else
 } // fin de la función insertarAlFinal
 
- // elimina un nodo de la parte frontal de la lista
+// elimina un nodo de la parte frontal de la lista
 bool Lista::eliminarDelFrente(Elemento * valor)
- {
+{
 	if (estaVacia()) // la Lista está vacía
-	    return false; // la eliminación no tuvo éxito
+		return false; // la eliminación no tuvo éxito
 	else
-		 {
+	{
 		NodoLista *tempPtr = primeroPtr; // contiene tempPtr a eliminar
-		
-			if (primeroPtr == ultimoPtr)
+
+		if (primeroPtr == ultimoPtr)
 			primeroPtr = ultimoPtr = 0; // no hay nodos después de la eliminación
-		    else
+		else
 			primeroPtr = primeroPtr->siguientePtr; // apunta al nodo que antes era el segundo
-		
-			valor = tempPtr->datos; // devuelve los datos que se van a eliminar
-		    delete tempPtr; // reclama el nodo que antes era el primero
-		    return true; // la eliminación tuvo éxito
-		 } // fin de else
-	 } // fin de la función eliminarDelFrente
+
+		valor = tempPtr->datos; // devuelve los datos que se van a eliminar
+		delete tempPtr; // reclama el nodo que antes era el primero
+		return true; // la eliminación tuvo éxito
+	} // fin de else
+} // fin de la función eliminarDelFrente
 
 // elimina un nodo de la parte final de la lista
 
@@ -167,46 +167,46 @@ bool Lista::eliminarDelFinal(Elemento * valor)
 	if (estaVacia()) // la Lista está vacía
 		return false; // la eliminación no tuvo éxito
 	else
-		 {
-		 NodoLista *tempPtr = ultimoPtr; // contiene tempPtr a eliminar
-		
-			 if (primeroPtr == ultimoPtr) // la Lista tiene un elemento
-			 primeroPtr = ultimoPtr = 0; // no hay nodos después de la eliminación
-		 else
-			 {
-			 NodoLista *actualPtr = primeroPtr;
-			
-				 // localiza el penúltimo elemento
-				 while (actualPtr->siguientePtr != ultimoPtr)
-				 actualPtr = actualPtr->siguientePtr; // se desplaza al siguiente nodo
-			
-				 ultimoPtr = actualPtr; // elimina el último nodo
-			 actualPtr->siguientePtr = 0; // ahora éste es el último nodo
-			 } // fin de else2
-		
-			 valor = tempPtr->datos; // devuelve el valor del nodo que antes era el último
-		 delete tempPtr; // reclama el nodo que antes era el último
-		 return true; // la eliminación tuvo éxito
-		 } // fin de else1
+	{
+		NodoLista *tempPtr = ultimoPtr; // contiene tempPtr a eliminar
+
+		if (primeroPtr == ultimoPtr) // la Lista tiene un elemento
+			primeroPtr = ultimoPtr = 0; // no hay nodos después de la eliminación
+		else
+		{
+			NodoLista *actualPtr = primeroPtr;
+
+			// localiza el penúltimo elemento
+			while (actualPtr->siguientePtr != ultimoPtr)
+				actualPtr = actualPtr->siguientePtr; // se desplaza al siguiente nodo
+
+			ultimoPtr = actualPtr; // elimina el último nodo
+			actualPtr->siguientePtr = 0; // ahora éste es el último nodo
+		} // fin de else2
+
+		valor = tempPtr->datos; // devuelve el valor del nodo que antes era el último
+		delete tempPtr; // reclama el nodo que antes era el último
+		return true; // la eliminación tuvo éxito
+	} // fin de else1
 } // fin de la función eliminarDelFinal
 
 void Lista::primerElemento()
 {
-	
+
 	if (estaVacia()) // la Lista está vacía
 		cout << "No hay elementos" << endl; // la nueva lista sólo tiene un nodo
 	else // la Lista no está vacía
 	{
 		cout << "El primer Elemento es: " << *primeroPtr->datos << "\n";
 		cout << "\n";// apunta el nuevo nodo al nodo que antes era el primero
-		 // orienta primeroPtr hacia el nuevo nodo
+		// orienta primeroPtr hacia el nuevo nodo
 	} // fin de else
 } // fin de la función insertarAlFrente
 
 // inserta un nodo al final de la lista
 
- // ¿está la Lista vacía?
- bool Lista::estaVacia()
+// ¿está la Lista vacía?
+bool Lista::estaVacia()
 {
 	return primeroPtr == 0;
 } // fin de la función estaVacia
@@ -221,21 +221,21 @@ NodoLista* Lista::obtenerNuevoNodo(Elemento * valor)
 void Lista::imprimir()
 {
 	if (estaVacia()) // la Lista está vacía
-		 {
-		 cout << "No se encontraron elementos\n\n";
-		 return;
-		 } // fin de if
-	
-		 NodoLista *actualPtr = primeroPtr;
-	
-		 cout << "Los Elementos son: ";
-	
-		 while (actualPtr != 0) // obtiene los datos del elemento
-		 {
-		 cout << *actualPtr->datos << " ";
-		 actualPtr = actualPtr->siguientePtr;
-		 } // fin de while
-	
-		 cout << "\n\n";
-	 } // fin de la función imprimir
+	{
+		cout << "No se encontraron elementos\n\n";
+		return;
+	} // fin de if
+
+	NodoLista *actualPtr = primeroPtr;
+
+	cout << "Los Elementos son: ";
+
+	while (actualPtr != 0) // obtiene los datos del elemento
+	{
+		cout << *actualPtr->datos << " ";
+		actualPtr = actualPtr->siguientePtr;
+	} // fin de while
+
+	cout << "\n\n";
+} // fin de la función imprimir
 

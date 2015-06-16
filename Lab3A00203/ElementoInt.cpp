@@ -8,7 +8,7 @@
 #include "stdafx.h"
 
 ElementoInt::ElementoInt(int i) :
-		i(i) {
+i(i) {
 }
 
 ElementoInt::~ElementoInt() {
