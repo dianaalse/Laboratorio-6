@@ -79,7 +79,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ArbolBinario.h" />
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="ElementoDou.h" />
     <ClInclude Include="ElementoInt.h" />
@@ -93,7 +92,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArbolBinario.cpp" />
     <ClCompile Include="Elemento.cpp" />
     <ClCompile Include="ElementoDou.cpp" />
     <ClCompile Include="ElementoInt.cpp" />

@@ -24,9 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ArbolBinario.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Elemento.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,9 +69,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Persona.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ArbolBinario.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Elemento.cpp">
